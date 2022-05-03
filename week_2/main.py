@@ -11,7 +11,8 @@ with open("./data.txt", "r") as file:
         y.append(b)
 
 model = QuadraticModel(x, y, QuadraticModel.MEAN_ABSOLUTE_ERROR)
-model.grid_search((-5, 5), (-5, 5), (-5, 5))
+# params ending are excluded values
+model.grid_search((-5, 6), (-5, 6), (-5, 6))
 
 if __name__ == "__main__":
     print("MEAN_ABSOLUTE_ERROR")
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     print()
 
 model = QuadraticModel(x, y, QuadraticModel.MEAN_SQUARED_ERROR)
-model.grid_search((-5, 5), (-5, 5), (-5, 5))
+model.grid_search((-5, 6), (-5, 6), (-5, 6))
 
 if __name__ == "__main__":
     print("MEAN_SQUARED_ERROR")
